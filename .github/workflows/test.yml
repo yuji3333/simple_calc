@@ -1,0 +1,20 @@
+name: Test library on pull request into develop
+
+on:
+  pull_request
+
+jobs:
+  test:
+    name: Test library
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+        
+    strategy:
+      fail-fast: false
+      matrix:
+        pyver: ["3.8", "3.9", "3.10"]
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: say hello
+      run: echo "Hello, world!"
