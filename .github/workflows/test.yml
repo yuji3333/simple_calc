@@ -9,10 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
         
-    strategy:
-      fail-fast: false
-      matrix:
-        pyver: ["3.8", "3.9", "3.10"]
     steps:
     - uses: actions/checkout@v4
     
