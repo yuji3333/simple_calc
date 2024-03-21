@@ -11,9 +11,12 @@ jobs:
         
     steps:
     - uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
     
     - name: say hello
       run: echo "Hello, world!"
     
     - name: error
-      run: echo error >&2
+      run: python3 sample.py
